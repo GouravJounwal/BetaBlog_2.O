@@ -1,0 +1,23 @@
+<h2>All articles</h2>
+
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Discreption</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+<% @article.each do |article| %>
+    <tr>
+        <td><%= article.title %> </td>
+        <td><%= article.discription %> </td>
+        <td><%= link_to "Show", article %> </td>
+       <td><%= button_to "Delete", article_path(article), method: :delete %></td>
+    </tr>
+<% end %>
+</tbody>
+
+</table>
