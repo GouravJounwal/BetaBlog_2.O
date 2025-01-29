@@ -2,3 +2,6 @@
 
 <p><strong>Title of the article: <%= @article.title %></strong> </p>
 <p><strong>Discreption of the article: <%= @article.discription %></strong> </p>
+
+<p><%= link_to "Back", articles_path %> | <%= link_to "Edit", edit_article_path(@article) %>  | <%= button_to "Delete", article_path(@article), method: :delete , data: {confirm: "are you sure?"} %>
+</p> 

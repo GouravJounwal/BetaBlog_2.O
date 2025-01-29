@@ -15,9 +15,13 @@
         <td><%= article.title %> </td>
         <td><%= article.discription %> </td>
         <td><%= link_to "Show", article %> </td>
-       <td><%= button_to "Delete", article_path(article), method: :delete %></td>
+        <td><%= link_to "Edit", edit_article_path(article) %></td>
+       <td><%= button_to "Delete", article_path(article), method: :delete , data: {confirm: "are you sure?"} %></td>
     </tr>
 <% end %>
 </tbody>
 
 </table>
+<p>
+    <%= link_to "crearte New article", new_article_path %>
+    </p>

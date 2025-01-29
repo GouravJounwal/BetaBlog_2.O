@@ -1,16 +1,2 @@
 <h2>Edit this article</h2>
-<% if @article.errors.any? %>
-   <h3>All Errors:</h3>
-   <% @article.errors.full_messages.each do |msg| %>
-      <p><%= msg %></p>
-   <% end %>
-<% end %>
-
-<%= form_with(model: @article, local: true) do |form| %>
-   <p> <%= form.label :title %>
-    <%= form.text_field :title %> <br>
-    </p>
-  <p> <%= form.label :discription %>
-  <%= form.text_area :discription %> <br> </p> 
-    <%= form.submit %>
-<% end %>
+ <%= render 'articles/form' %>
